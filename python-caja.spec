@@ -25,7 +25,7 @@ Summary:	Pkgconfig file and examples for %{name}
 Group:		Development/Other
 Requires:	%{name} = %{version}
 
-%description
+%description devel
 Pkgconfig file and examples for %{name}.
 
 %prep
