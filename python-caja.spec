@@ -1,11 +1,11 @@
 Summary:	Python bindings for MATE's caja
 Name:		python-caja
-Version:	1.2.0
+Version:	1.4.0
 Release:	1
 License:	GPLv2+ and LGPLv2+
 Group:		Development/Python
 URL:		http://mate-desktop.org
-Source0:	http://pub.mate-desktop.org/releases/1.2/%{name}-%{version}.tar.xz
+Source0:	http://pub.mate-desktop.org/releases/1.4/%{name}-%{version}.tar.xz
 
 BuildRequires:	gtk-doc
 BuildRequires:	mate-common
@@ -53,4 +53,11 @@ find $RPM_BUILD_ROOT -name '*.la' -exec rm {} \;
 %doc %{_datadir}/doc/caja-python/README
 %doc %{_datadir}/doc/caja-python/examples/*
 
+
+
+
+%changelog
+* Thu Jun 07 2012 Matthew Dawkins <mattydaw@mandriva.org> 1.2.0-1
++ Revision: 803195
+- imported package python-caja
 
