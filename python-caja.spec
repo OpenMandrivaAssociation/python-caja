@@ -41,7 +41,7 @@ NOCONFIGURE=1 ./autogen.sh
 %makeinstall_std
 
 
-find $RPM_BUILD_ROOT -name '*.la' -exec rm {} \;
+find %{buildroot} -name '*.la' -exec rm {} \;
 
 %files
 %doc AUTHORS ChangeLog NEWS 
