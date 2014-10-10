@@ -2,7 +2,7 @@
 
 Summary:	Python bindings for MATE's caja
 Name:		python-caja
-Version:	1.8.0
+Version:	1.8.1
 Release:	1
 License:	GPLv2+ and LGPLv2+
 Group:		Development/Python
@@ -12,7 +12,7 @@ BuildRequires:	gtk-doc
 BuildRequires:	mate-common
 BuildRequires:	pkgconfig(libcaja-extension)
 BuildRequires:	pkgconfig(pygtk-2.0)
-BuildRequires:	pkgconfig(python)
+BuildRequires:	pkgconfig(python3)
 
 %description
 These are bindings for the caja extension library
@@ -31,7 +31,7 @@ Pkgconfig file and examples for %{name}.
 NOCONFIGURE=1 ./autogen.sh
 
 %build
-%configure2_5x
+%configure
 
 %make
 
