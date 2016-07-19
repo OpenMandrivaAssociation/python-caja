@@ -2,8 +2,8 @@
 
 Summary:	Python bindings for MATE's caja
 Name:		python-caja
-Version:	1.8.1
-Release:	2
+Version:	1.14.0
+Release:	1
 License:	GPLv2+ and LGPLv2+
 Group:		Development/Python
 Url:		http://mate-desktop.org
@@ -39,13 +39,16 @@ NOCONFIGURE=1 ./autogen.sh
 %makeinstall_std
 mkdir -p %{buildroot}%{_datadir}/caja-python/extensions
 
-%files
+%find_lang %{name}
+
+%files -f %{name}.lang
 %doc AUTHORS ChangeLog NEWS 
 %dir %{_libdir}/caja
 %dir %{_libdir}/caja/extensions-2.0
 %{_libdir}/caja/extensions-2.0/*
 %dir %{_datadir}/caja-python
 %dir %{_datadir}/caja-python/extensions
+%{_datadir}/caja/extensions/libcaja-python.caja-extension
 
 %files devel
 %{_libdir}/pkgconfig/caja-python.pc
