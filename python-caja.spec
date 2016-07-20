@@ -10,9 +10,10 @@ Url:		http://mate-desktop.org
 Source0:	http://pub.mate-desktop.org/releases/%{url_ver}/%{name}-%{version}.tar.xz
 BuildRequires:	gtk-doc
 BuildRequires:	mate-common
+BuildRequires:	intltool
 BuildRequires:	pkgconfig(libcaja-extension)
-BuildRequires:	pkgconfig(pygtk-2.0)
-BuildRequires:	pkgconfig(python3)
+BuildRequires:	pkgconfig(pygobject-3.0)
+BuildRequires:	pkgconfig(python2)
 
 %description
 These are bindings for the caja extension library
