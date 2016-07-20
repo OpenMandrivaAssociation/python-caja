@@ -13,7 +13,7 @@ BuildRequires:	mate-common
 BuildRequires:	intltool
 BuildRequires:	pkgconfig(libcaja-extension)
 BuildRequires:	pkgconfig(pygobject-3.0)
-BuildRequires:	pkgconfig(python2)
+BuildRequires:	pkgconfig(python3)
 
 %description
 These are bindings for the caja extension library
