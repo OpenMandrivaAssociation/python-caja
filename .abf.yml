@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   python-caja-1.14.0.tar.xz: 6a550470db3069ba43ab57e8d4d55259237dba3c
+sources:
+  python-caja-1.18.0.tar.xz: fb4e8b53694651bb606e5f9d361b9997d927875a

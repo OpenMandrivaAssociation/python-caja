@@ -2,7 +2,7 @@
 
 Summary:	Python bindings for MATE's caja
 Name:		python-caja
-Version:	1.14.0
+Version:	1.18.0
 Release:	1
 License:	GPLv2+ and LGPLv2+
 Group:		Development/Python
@@ -29,18 +29,18 @@ Pkgconfig file and examples for %{name}.
 
 %prep
 %setup -q
-NOCONFIGURE=1 ./autogen.sh
 
 %build
+#NOCONFIGURE=yes ./autogen.sh
 %configure
-
 %make
 
 %install
 %makeinstall_std
 mkdir -p %{buildroot}%{_datadir}/caja-python/extensions
 
-%find_lang %{name}
+# locales
+%find_lang %{name} --with-gnome --all-name
 
 %files -f %{name}.lang
 %doc AUTHORS ChangeLog NEWS 
