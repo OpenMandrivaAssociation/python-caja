@@ -17,6 +17,8 @@ BuildRequires:	pkgconfig(gtk-doc)
 BuildRequires:	pkgconfig(pygobject-3.0)
 BuildRequires:	pkgconfig(python2)
 
+Provides:	python2-caja
+
 %description
 The MATE Desktop Environment is the continuation of GNOME 2. It provides an
 intuitive and attractive desktop environment using traditional metaphors for
