@@ -15,9 +15,9 @@ BuildRequires:	mate-common
 BuildRequires:	pkgconfig(libcaja-extension)
 BuildRequires:	pkgconfig(gtk-doc)
 BuildRequires:	pkgconfig(pygobject-3.0)
-BuildRequires:	pkgconfig(python)
+BuildRequires:	pkgconfig(python2)
 
-#Provides:	python2-caja
+Provides:	python2-caja
 
 %description
 The MATE Desktop Environment is the continuation of GNOME 2. It provides an
@@ -57,7 +57,7 @@ Pkgconfig file and examples for %{name}.
 %setup -q
 
 # force to python
-find examples/ -name \*py -exec sed -i -e 's|#!/usr/bin/python|#!/usr/bin/env python|' '{}' \;
+find examples/ -name \*py -exec sed -i -e 's|#!/usr/bin/python|#!/usr/bin/env python2|' '{}' \;
 
 %build
 export PYTHON=%{__python2}
