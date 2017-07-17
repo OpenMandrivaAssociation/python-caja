@@ -56,8 +56,8 @@ Pkgconfig file and examples for %{name}.
 %prep
 %setup -q
 
-# force to python2
-find examples/ -name \*py -exec sed -i -e 's|#!/usr/bin/python|#!/usr/bin/env python2|' '{}' \;
+# force to python
+find examples/ -name \*py -exec sed -i -e 's|#!/usr/bin/python|#!/usr/bin/env python|' '{}' \;
 
 %build
 export PYTHON=%{__python2}
