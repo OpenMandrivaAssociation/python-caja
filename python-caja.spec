@@ -2,7 +2,7 @@
 
 Summary:	Python bindings for MATE's caja
 Name:		python-caja
-Version:	1.20.0
+Version:	1.20.2
 Release:	1
 License:	GPLv2+ and LGPLv2+
 Group:		Development/Python
@@ -60,14 +60,15 @@ Pkgconfig file and examples for %{name}.
 find examples/ -name \*py -exec sed -i -e 's|#!/usr/bin/python|#!/usr/bin/env python2|' '{}' \;
 
 %build
+%autopatch -p1
 export PYTHON=%{__python2}
 
 #NOCONFIGURE=yes ./autogen.sh
 %configure
-%make
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 mkdir -p %{buildroot}%{_datadir}/caja-python/extensions
 
 # locales
