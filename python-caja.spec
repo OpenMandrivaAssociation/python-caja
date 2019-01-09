@@ -2,8 +2,8 @@
 
 Summary:	Python bindings for MATE's caja
 Name:		python-caja
-Version:	1.18.0
-Release:	2
+Version:	1.18.1
+Release:	1
 License:	GPLv2+ and LGPLv2+
 Group:		Development/Python
 Url:		http://mate-desktop.org
