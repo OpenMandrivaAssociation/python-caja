@@ -30,13 +30,14 @@ preserving a traditional desktop experience.
 This package provides bindings for the caja extension library with Python.
 
 %files -f %{name}.lang
-%doc AUTHORS ChangeLog NEWS 
+%doc README AUTHORS ChangeLog NEWS
 %dir %{_libdir}/caja
 %dir %{_libdir}/caja/extensions-2.0
 %{_libdir}/caja/extensions-2.0/*
 %dir %{_datadir}/caja-python
 %dir %{_datadir}/caja-python/extensions
 %{_datadir}/caja/extensions/libcaja-python.caja-extension
+%doc %dir %{_docdir}/%{name}/examples/
 
 #---------------------------------------------------------------------------
 
@@ -73,4 +74,3 @@ mkdir -p %{buildroot}%{_datadir}/caja-python/extensions
 
 # locales
 %find_lang %{name} --with-gnome --all-name
-
