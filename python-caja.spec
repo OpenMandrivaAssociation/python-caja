@@ -37,7 +37,7 @@ This package provides bindings for the caja extension library with Python.
 %dir %{_datadir}/caja-python
 %dir %{_datadir}/caja-python/extensions
 %{_datadir}/caja/extensions/libcaja-python.caja-extension
-%doc %dir %{_docdir}/%{name}/examples/
+%doc %{_docdir}/%{name}/examples/
 
 #---------------------------------------------------------------------------
 
