@@ -2,7 +2,7 @@
 
 Summary:	Python bindings for MATE's caja
 Name:		python-caja
-Version:	1.20.2
+Version:	1.22.0
 Release:	1
 License:	GPLv2+ and LGPLv2+
 Group:		Development/Python
