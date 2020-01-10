@@ -2,7 +2,7 @@
 
 Summary:	Python bindings for MATE's caja
 Name:		python-caja
-Version:	1.22.0
+Version:	1.22.1
 Release:	1
 License:	GPLv2+ and LGPLv2+
 Group:		Development/Python
@@ -15,9 +15,11 @@ BuildRequires:	mate-common
 BuildRequires:	pkgconfig(libcaja-extension)
 BuildRequires:	pkgconfig(gtk-doc)
 BuildRequires:	pkgconfig(pygobject-3.0)
-BuildRequires:	pkgconfig(python2)
+BuildRequires:	pkgconfig(python)
 
-Provides:	python2-caja
+Provides:	python-caja
+%{?python_provide:%python_provide python3-caja}
+Obsoletes:      python2-caja < 1.22.0-2
 
 %description
 The MATE Desktop Environment is the continuation of GNOME 2. It provides an
@@ -58,11 +60,11 @@ Pkgconfig file and examples for %{name}.
 %setup -q
 
 # force to python
-find examples/ -name \*py -exec sed -i -e 's|#!/usr/bin/python|#!/usr/bin/env python2|' '{}' \;
+find examples/ -name \*py -exec sed -i -e 's|#!/usr/bin/python|#!/usr/bin/env python|' '{}' \;
 
 %build
 %autopatch -p1
-export PYTHON=%{__python2}
+export PYTHON=%{__python}
 
 #NOCONFIGURE=yes ./autogen.sh
 %configure
