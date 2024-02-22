@@ -1,13 +1,13 @@
-%define url_ver %(echo %{version}|cut -d. -f1,2)
+%define mate_ver	%(echo %{version}|cut -d. -f1,2)
 
 Summary:	Python bindings for MATE's caja
 Name:		python-caja
-Version:	1.26.0
+Version:	1.28.0
 Release:	1
 License:	GPLv2+ and LGPLv2+
 Group:		Development/Python
 Url:		http://mate-desktop.org
-Source0:	http://pub.mate-desktop.org/releases/%{url_ver}/%{name}-%{version}.tar.xz
+Source0:	http://pub.mate-desktop.org/releases/%{mate_ver}/%{name}-%{version}.tar.xz
 
 BuildRequires:	autoconf-archive
 BuildRequires:	intltool
@@ -19,8 +19,6 @@ BuildRequires:	pkgconfig(pygobject-3.0)
 BuildRequires:	pkgconfig(python)
 
 Provides:	python-caja
-%{?python_provide:%python_provide python3-caja}
-Obsoletes:      python2-caja < 1.22.0-2
 
 %description
 The MATE Desktop Environment is the continuation of GNOME 2. It provides an
@@ -58,22 +56,21 @@ Pkgconfig file and examples for %{name}.
 #---------------------------------------------------------------------------
 
 %prep
-%setup -q
+%autosetup -p1
 
 # force to python
 find examples/ -name \*py -exec sed -i -e 's|#!/usr/bin/python|#!/usr/bin/env python|' '{}' \;
 
 %build
-%autopatch -p1
-export PYTHON=%{__python}
-
 #NOCONFIGURE=yes ./autogen.sh
 %configure
 %make_build
 
 %install
 %make_install
-mkdir -p %{buildroot}%{_datadir}/caja-python/extensions
+
+install -pm 0755 -d %{buildroot}%{_datadir}/caja-python/extensions
 
 # locales
 %find_lang %{name} --with-gnome --all-name
+
