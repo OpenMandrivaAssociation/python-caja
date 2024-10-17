@@ -6,7 +6,7 @@ Version:	1.28.0
 Release:	1
 License:	GPLv2+ and LGPLv2+
 Group:		Development/Python
-Url:		http://mate-desktop.org
+Url:		https://mate-desktop.org
 Source0:	http://pub.mate-desktop.org/releases/%{mate_ver}/%{name}-%{version}.tar.xz
 
 BuildRequires:	autoconf-archive
